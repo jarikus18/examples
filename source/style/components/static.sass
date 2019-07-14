@@ -1,0 +1,52 @@
+@import './../_mixin';
+@import './../vars';
+.container 
+  @include desktop
+    width: 1140px
+  @include laptop
+    width: 970px
+  @include tablet
+    width: 720px
+  @include phone
+    width: 576px
+  @include small-phone
+    width: 100%
+
+html, body
+  height: 100%
+
+body
+  min-width: 320px
+  font-size: 16px
+  line-height: 1.65
+  font-family: $default-font
+
+.wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+  position: relative
+  overflow: hidden
+  text-align: center
+
+main
+  flex: 1 0 auto
+
+footer
+  flex: 0 0 auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+  object-fit: cover
+	&.img-width
+		width: 100%
+
+ul 
+	padding: 0
+	li 
+		list-style: none
+
+a
+	text-decoration: none
