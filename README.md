@@ -1,7 +1,17 @@
-# Start html temlpate
+# Start html template
 
-to start
+## Requirements
 
-# npm i
-# gulp
+```
+Node.JS 8+
+NPM module
+```
 
+## Inside
+**source/**  - Source code, SASS+PUG<br>
+**build/** - Combiled code by babel, ready for launch at prod<br>
+
+
+## Commands
+**npm install** - Install app<br>
+**gulp** - start template<br>
