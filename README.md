@@ -5,6 +5,7 @@
 ```
 Node.JS 8+
 NPM module
+Gulp 4+
 ```
 
 ## Inside
