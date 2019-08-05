@@ -21,7 +21,8 @@ $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
     'sass',
-    'pug',
+    // 'pug',
+    'html',
     'scripts',
     'image',
   ),
