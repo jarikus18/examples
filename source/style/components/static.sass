@@ -1,16 +1,27 @@
 @import './../_mixin';
 @import './../vars';
-.container 
+.container
+  width: 80%
+  margin: 0 10%
   @include desktop
-    width: 1140px
+     width: 1140px
+     margin: 0
   @include laptop
     width: 970px
+    margin: 0
   @include tablet
     width: 720px
+    margin: 0
   @include phone
     width: 576px
+    margin: 0
   @include small-phone
     width: 100%
+    margin: 0
+*
+  box-sizing: border-box
+  &:focus
+    outline: none
 
 html, body
   height: 100%
@@ -50,3 +61,87 @@ ul
 
 a
 	text-decoration: none
+
+.d-flex
+  display: flex
+.align-items-center
+  align-items: center
+.justify-content-between
+  justify-content: space-between
+.h1
+  font-weight: bold
+  font-size: 44px
+  line-height: 46px
+.h4
+  font-weight: bold
+  font-size: 18px
+  line-height: 17px
+.subtitle
+  font-size: 24px
+  line-height: 23px
+.text-left
+  text-align: left
+.text-center
+  text-align: center
+
+.main
+  background-image: url(../img/gb-home.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  max-height: 650px
+
+.white
+  color: $white
+.dark
+  color: $black
+.accent
+  color: $accent
+.bg-dart
+  background-color: $black
+
+.btn
+  background: linear-gradient(262.67deg, #FFC200 0%, #FFD829 99.04%)
+  border-radius: 45px
+  border: none
+  border-bottom: 2px solid #DDA800
+  font-size: 16px
+  padding: 16px 20px 13px
+  cursor: pointer
+  box-shadow: 0px 4px 20px rgba(255, 216, 41, 0.45)
+  &:active 
+    border-bottom: 0
+    margin-bottom: 2px
+
+header
+  padding-top: 10px
+
+
+.social
+  display: flex
+  &-item
+    margin: 0 6px
+  &-link
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 100%
+    background-color: $background
+    width: 24px
+    height: 24px
+    &:hover
+      opacity: 0.9
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25)
+    img 
+      width: 12px
+.quiz
+  .text
+    display: block
+    margin-left: 15px
+
+.video
+  padding: 30px 0
+  .title
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 29px;
+    margin: 20px 0 
