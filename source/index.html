@@ -19,7 +19,7 @@
             <img src="assets/img/logo.svg" alt="logo">
           </div>
           <div class="quiz d-flex align-items-center">
-            <button class="btn">Пройти опрос</button>
+            <button class="btn" data-micromodal-open="quiz-modal">Пройти опрос</button>
             <p class="text h4 white">
               Пройдите опрос и получите<br />персональную скидку
             </p>
@@ -47,7 +47,7 @@
           </div>
         </header>
         <div class="container">
-          <div class="home">
+          <div class="home d-flex justify-content-between align-items-center">
             <div class="left">
               <h1 class='h1 white'>Дарим подарки<br>новым клиентам!</h1>
               <div class="subtitle white">
@@ -57,8 +57,22 @@
               </div>
             </div>
             <div class="right">
-              <form>
-
+              <form class='form white text-center'>
+                <div class="title">
+                  Оставьте заявку <br />
+                  <span>и мы свяжемся с вами</span>
+                </div>
+                <fieldset>
+                  <input name='name' type="text" placeholder="Ваше имя" required>
+                  <input name='phone' type="tel" placeholder="Ваш номер телефона" required>
+                  <input name='email' type="email" placeholder="Ваш email" required>
+                  <button class="btn submit">Отправить</button>
+                </fieldset>
+                <div class="policy">
+                  Отправляя заявку, вы 
+                  подтверждаете согласие <br />с Договором оферты 
+                  и Политикой Конфиденциальности.
+                </div>
               </form>
             </div>
           </div>
@@ -67,7 +81,7 @@
       </main>
       <div class="section-video bg-dart">
         <div class="container">
-          <img src="assets/img/video.jpg" alt="">
+          <img class='img-responsive' src="assets/img/video.jpg" alt="">
           <div class="title accent">Напишите нам Telegram: @donatpoint</div>
         </div>
       </div>
@@ -84,7 +98,7 @@
               </div>
             </div>
             <div class="right">
-              <img src="assets/img/money.png" alt="">
+              <img class="img-responsive" src="assets/img/money.png" alt="">
             </div>
           </div>
         </div>
@@ -138,7 +152,7 @@
               ПОДАРКИ
             </span>
           </div>
-          <button class="btn">
+          <button class="btn" data-micromodal-open="modal">
             Уточнить
           </button>
         </div>
@@ -175,10 +189,65 @@
       </div>
 
       <div class="section-work bg-dart white">
-        <div class="h3">Как начать с нами работать?</div>
-        <div class="block-mail text-left d-flex justify-content-between align-items-center">
-          <div class="text">Недостаточно средств для начала работы? <br />Мы сделаем для Вас рассрочку</div>
-          <a href="#" class='link'><img src="assets/img/icons/mail.svg" alt=""></a>
+        <div class="container">
+          <div class="h3">Как начать с нами работать?</div>
+          <div class="steps d-flex justify-content-between">
+            <div class="step first">
+              <div class="image"><img src="assets/img/icons/laptop.svg" alt=""></div>
+              <div class="text">
+                Оставляете заявку, <br />договариваемся об <br />условиях сотрудничества
+              </div>
+            </div>
+            <div class="step second">
+              <div class="image"><img src="assets/img/icons/ancketa.svg" alt=""></div>
+              <div class="text">
+                Открываете ИП или ООО
+              </div>
+            </div>
+            <div class="step third">
+              <div class="image"><img src="assets/img/icons/key.svg" alt=""></div>
+              <div class="text">
+                Монтаж оборудования и <br />установка ПАК Донат на ПК
+              </div>
+            </div>
+            <div class="step fourth">
+              <div class="image"><img src="assets/img/icons/doc.svg" alt=""></div>
+              <div class="text">
+                Высылаем полный <br />комплект Документации. <br />Начало работы.
+              </div>
+            </div>
+          </div>
+          <div class="block-mail text-left d-flex justify-content-between align-items-center">
+            <div class="text">Недостаточно средств для начала работы? <br />Мы сделаем для Вас рассрочку</div>
+            <a href="#" class='link'><img src="assets/img/icons/mail.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-about bg-dart text-left">
+        <div class="container">
+          <div class="about-us d-flex">
+            <div class="left">
+              <div class="title h3">Почему нужно работать <br />именно с нами?</div>
+              <div class="text">
+                Мы подходим к делу с полной ответственностью. <br />
+                В нашем штате собраны только профессионалы <br />
+                и каждый отвечает за свое дело.
+              </div>
+            </div>
+            <div class="right">
+              <div class="list-title accent text-center">
+                3 главных составляющих ПАК DONAT:
+              </div>
+              <ul class="part white">
+                <li class="part-item"><span>1</span> Абсолютно БЕЛАЯ документация</li>
+                <li class="part-item"><span>2</span> Безопасная схема работы</li>
+                <li class="part-item"><span>3</span> Отличная развлекательная программа 
+                  со множеством анимаций, чего нет у конкурентов
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -234,6 +303,171 @@
           </ul>
         </div>
       </footer>
+    </div>
+
+    <div class="modal micromodal-slide" id='modal' aria-hidden="true">
+      <div class="modal__overlay">
+        <div class="modal__container">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+            <img data-micromodal-close src='assets/img/icons/close.svg' alt='' />
+          </button>
+          <form class='form white text-center' netlify>
+            <div class="title">
+              Оставьте заявку <br />
+              <span>и мы свяжемся с вами</span>
+            </div>
+            <fieldset>
+              <input name='name' autocomplete="off" type="text" placeholder="Ваше имя" required>
+              <input name='phone' autocomplete="off" type="tel" placeholder="Ваш номер телефона" required>
+              <input name='email' autocomplete="off" type="email" placeholder="Ваш email" required>
+              <button class="btn submit">Отправить</button>
+            </fieldset>
+            <div class="policy">
+              Отправляя заявку, вы 
+              подтверждаете согласие <br />с Договором оферты 
+              и Политикой Конфиденциальности.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal micromodal-slide quiz-modal" id='quiz-modal' aria-hidden="true">
+      <div class="modal__overlay">
+        <div class="modal__container">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+            <img data-micromodal-close src='assets/img/icons/close.svg' alt='' />
+          </button>
+          <form class='form white text-center'>
+            <div class="header d-flex justify-content-between align-items-center">
+              <div class="title accent">
+                Ответь на 5 вопросов, получите персональную скидку
+              </div>
+              <div class="page">
+                <span class="current-page">1</span>/5
+              </div>
+            </div>
+            <fieldset class='p-1'>
+              <div class="question">Когда вы планируете начало работы?</div>
+              <p>
+                <input type="radio" id="q1" name="question-1">
+                <label for="q1">в течении 14 дней</label>
+              </p>
+              <p>
+                <input type="radio" id="q2" name="question-1">
+                <label for="q2">в течении 30 дней</label>
+              </p>
+              <p>
+                <input type="radio" id="q3" name="question-1">
+                <label for="q3">в течении 60 дней</label>
+              </p>          
+              <p>
+                <input type="radio" id="q4" name="question-1">
+                <label for="q4">в течении 180 дней</label>
+              </p>
+            </fieldset>
+
+            <fieldset class='p-2'>
+              <div class="question">Какое количество точек вы планируете открыть?</div>
+              <p>
+                <input type="radio" id="p2q1" name="question-2">
+                <label for="p2q1">1</label>
+              </p>
+              <p>
+                <input type="radio" id="p2q2" name="question-2">
+                <label for="p2q2">2</label>
+              </p>
+              <p>
+                <input type="radio" id="p2q3" name="question-2">
+                <label for="p2q3">3</label>
+              </p>          
+              <p>
+                <input type="radio" id="p2q4" name="question-2">
+                <label for="p2q4">более 3</label>
+              </p>
+            </fieldset>
+
+            <fieldset class='p-3'>
+              <div class="question">Вы бы хотели получить эксклюзивные условия работы в вашем городе (регионе)?</div>
+              <p>
+                <input type="radio" id="p3q1" name="question-3">
+                <label for="p3q1">да</label>
+              </p>
+              <p>
+                <input type="radio" id="p3q2" name="question-3">
+                <label for="p3q2">нет</label>
+              </p>
+            </fieldset>
+
+            <fieldset class='p-4'>
+              <div class="question">Вы уже занимались (занимаетесь) подобного рода деятельностью?</div>
+              <p>
+                <input type="radio" id="p4q1" name="question-4">
+                <label for="p4q1">да</label>
+              </p>
+              <p>
+                <input type="radio" id="p4q2" name="question-4">
+                <label for="p4q2">занимался давно/label>
+              </p>
+              <p>
+                <input type="radio" id="p4q3" name="question-4">
+                <label for="p4q3">хочу попробовать впервые</label>
+              </p>          
+              <p>
+                <input type="radio" id="p4q4" name="question-4">
+                <label for="p4q4">никогда не занимался</label>
+              </p>
+            </fieldset>
+
+            <fieldset class='p-5'>
+              <div class="question">Что для Вас главное, при выборе программного обеспечения?</div>
+              <p>
+                <input type="radio" id="p5q1" name="question-5">
+                <label for="p5q1">Документация</label>
+              </p>
+              <p>
+                <input type="radio" id="p5q2" name="question-5">
+                <label for="p5q2">Безопасность работы</label>
+              </p>
+              <p>
+                <input type="radio" id="p5q3" name="question-5">
+                <label for="p5q3">Развлекательный процесс</label>
+              </p>          
+              <p>
+                <input type="radio" id="p5q4" name="question-5">
+                <label for="p5q4">все в комплексе</label>
+              </p>
+            </fieldset>
+
+            <fieldset class='p-6'>
+              <div class="title">Ваша персональная скидка составила <br />+30% к первому депозиту</div>
+              <br />
+              <input name='name' type="text" placeholder="Ваше имя" required>
+              <input name='phone' type="tel" placeholder="Ваш номер телефона" required>
+              <input name='email' type="email" placeholder="Ваш email" required>
+              <button class="btn submit">Отправить</button>
+            </fieldset>
+
+            <div class="policy">
+              Отправляя заявку, вы 
+              подтверждаете согласие <br />с Договором оферты 
+              и Политикой Конфиденциальности.
+            </div>
+            <div class="arrows d-flex justify-content-between">
+              <button id='prev' type='button'>
+                <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.29289 7.2929C-0.0976334 7.68342 -0.0976333 8.31659 0.292891 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928934C7.68054 0.53841 7.04738 0.53841 6.65685 0.928934L0.29289 7.2929ZM31 7L0.999998 7L0.999998 9L31 9L31 7Z" fill="white" fill-opacity="0.35"/>
+                </svg>                               
+              </button>
+              <button id='next' type='button'>
+                <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M30.7071 8.70711C31.0976 8.31658 31.0976 7.68342 30.7071 7.29289L24.3431 0.928932C23.9526 0.538408 23.3195 0.538408 22.9289 0.928932C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM0 9H30V7H0V9Z" fill="white" fill-opacity="0.35"  />
+                </svg>                                            
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
   <script src="assets/js/scripts.min.js"></script>

@@ -3,11 +3,11 @@
 module.exports = function () {
   $.gulp.task('scripts', function () {
     return $.gulp.src([
-      './source/libs/jquery/jquery.min.js',
+      './source/libs/micromodal/micromodal.min.js',
       './source/js/common.js' // Always at the end
     ])
     .pipe($.concat('scripts.min.js'))
-    .pipe($.uglify()) // Mifify js (opt.)
+    // .pipe($.uglify()) // Mifify js (opt.)
     .on('error', $.gp.notify.onError(function(){
       return {
         title: 'Scripts',
