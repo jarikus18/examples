@@ -1,6 +1,6 @@
 .hamburger
 	cursor: pointer
-	padding: 10px 0 0
+	padding: 0
 	transition-property: opacity, filter
 	transition-duration: 0.15s
 	transition-timing-function: linear
@@ -10,8 +10,8 @@
 	text-align: center
 	margin: 0
 	overflow: visible
-	width: 30px
-	height: 30px
+	width: 35px
+	height: 35px
 	&:hover
 		opacity: 0.7
 	.hamburger.is-active:hover
@@ -21,8 +21,8 @@
 	.hamburger.is-active .hamburger-inner::after
 		background-color: #fff
 	.hamburger-box
-		width: 24px
-		height: 24px
+		width: 34px
+		height: 34px
 		display: inline-block
 		position: relative
 	.hamburger-inner
@@ -30,7 +30,7 @@
 		top: 50%
 		margin-top: -2px
 	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
-		width: 20px
+		width: 30px
 		height: 2px
 		background-color: #000
 		border-radius: 1px
@@ -38,33 +38,68 @@
 		transition-property: transform
 		transition-duration: 0.15s
 		transition-timing-function: ease
+	.hamburger-inner
+		width: 24px
+		right: 0
 	.hamburger-inner::before, .hamburger-inner::after
 		content: ""
 		display: block
 	.hamburger-inner::before
 		top: -8px
 	.hamburger-inner::after
-		bottom: -10px
-.hamburger--collapse .hamburger-inner
-	top: auto
-	bottom: 0
-	transition-duration: 0.13s
-	transition-delay: 0.13s
-	transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
-.hamburger--collapse .hamburger-inner::after
-	top: -16px
-	transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear
-.hamburger--collapse .hamburger-inner::before
-	transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)
-.hamburger--collapse.is-active .hamburger-inner
-	transform: translate3d(0, -10px, 0) rotate(-45deg)
-	transition-delay: 0.22s
-	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
-.hamburger--collapse.is-active .hamburger-inner::after
-	top: 0
-	opacity: 0
-	transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear
-.hamburger--collapse.is-active .hamburger-inner::before
-	top: 0
-	transform: rotate(-90deg)
-	transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1)
+		bottom: -8px
+
+.hamburger--emphatic
+	overflow: hidden
+.hamburger--emphatic .hamburger-inner
+	transition: background-color 0.125s 0.175s ease-in
+.hamburger--emphatic .hamburger-inner::before
+	right: 0;
+	transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in
+.hamburger--emphatic .hamburger-inner::after
+	top: 8px;
+	right: 0;
+	transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in
+.hamburger--emphatic.is-active .hamburger-inner
+	transition-delay: 0s;
+	transition-timing-function: ease-out;
+	background-color: transparent !important
+.hamburger--emphatic.is-active .hamburger-inner::before
+	left: -82.5px;
+	top: -82.5px;
+	transform: translate3d(80px, 80px, 0) rotate(45deg);
+	transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+.hamburger--emphatic.is-active .hamburger-inner::after
+	right: -82.5px;
+	top: -82.5px;
+	transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+	transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+
+/*
+   * Emphatic Reverse
+   */
+.hamburger--emphatic-r
+	overflow: hidden
+.hamburger--emphatic-r .hamburger-inner
+	transition: background-color 0.125s 0.175s ease-in
+.hamburger--emphatic-r .hamburger-inner::before
+	left: 0;
+	transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in
+.hamburger--emphatic-r .hamburger-inner::after
+	top: 10px;
+	right: 0;
+	transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in
+.hamburger--emphatic-r.is-active .hamburger-inner
+	transition-delay: 0s;
+	transition-timing-function: ease-out;
+	background-color: transparent !important
+.hamburger--emphatic-r.is-active .hamburger-inner::before
+	left: -80px;
+	top: 80px;
+	transform: translate3d(80px, -80px, 0) rotate(-45deg);
+	transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)
+.hamburger--emphatic-r.is-active .hamburger-inner::after
+	right: -80px;
+	top: 80px;
+	transform: translate3d(-80px, -80px, 0) rotate(45deg);
+	transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1)

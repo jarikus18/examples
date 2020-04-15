@@ -9,6 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
     debugMode: true
   });
 
+  // hamburger 
+  const hamburger = document.getElementById('hamburger')
+  hamburger.addEventListener('click', function(e) {
+    e.preventDefault()
+    const menu = document.querySelector('.social-top')
+    this.classList.toggle('is-active')
+    menu.classList.toggle('active')
+  })
+  // end hamburger
+
   // Quiz 
 
   let page = 1
