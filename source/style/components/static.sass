@@ -95,8 +95,7 @@ a
     font-size: 30px
     line-height: 32px
 .h4
-  font-weight: bold
-  font-size: 18px
+  font-size: 16px
   line-height: 17px
 .hidden
   opacity: 0
@@ -145,6 +144,9 @@ a
   padding: 16px 20px 13px
   cursor: pointer
   box-shadow: 0px 4px 20px rgba(255, 216, 41, 0.45)
+  &-quiz
+    padding: 11px 12px 8px
+    font-size: 14px
   &:active 
     border-bottom: 0
     margin-bottom: 2px
@@ -209,11 +211,14 @@ header
       img 
         width: 20px
 .quiz
+  margin-top: -30px
   .text
     display: block
     margin: 0 0 0 15px
   .btn
     animation: animation 1s infinite
+  @include phone
+    margin-top: 0px
 
 @keyframes animation
   0%
