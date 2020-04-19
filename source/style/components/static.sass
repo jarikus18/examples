@@ -150,6 +150,11 @@ a
   &:active 
     border-bottom: 0
     margin-bottom: 2px
+  &.link
+    background: transparent
+    padding: 0
+    box-shadow: none
+    border: 0
 
 header
   padding-top: 10px
@@ -157,10 +162,16 @@ header
     flex-direction: column
     .logo
       margin-top: 20px
+      order: 2
     .quiz
-      flex-direction: column
+      order: 1
+      .text
+        font-size: 14px
       .btn
         margin: 20px 0 30px
+        white-space: nowrap
+      br 
+        display: none
     .social
       margin-top: 0
       position: fixed
