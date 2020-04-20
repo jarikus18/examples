@@ -146,9 +146,6 @@ a
   padding: 16px 20px 13px
   cursor: pointer
   box-shadow: 0px 4px 20px rgba(255, 216, 41, 0.45)
-  &-quiz
-    padding: 11px 12px 8px
-    font-size: 14px
   &:active 
     border-bottom: 0
     margin-bottom: 2px
@@ -166,15 +163,14 @@ header
       margin-top: 20px
       order: 2
     .quiz
+      margin: 20px 0 30px
       order: 1
       .text
         font-size: 12px
+        line-height: 14px
       .btn
-        margin: 20px 0 30px
         white-space: nowrap
         font-size: 12px
-      br 
-        display: none
     .social
       margin-top: 0
       position: fixed
@@ -195,7 +191,10 @@ header
       right: 20px
       top: 10px
       z-index: 99
-    // display: none!important
+  @include small-phone
+    .quiz
+      .text
+        max-width: 120px
 
 .hamburger
   padding-top: 2px
@@ -225,7 +224,6 @@ header
       img 
         width: 20px
 .quiz
-  margin-top: -30px
   .text
     display: block
     margin: 0 0 0 15px
